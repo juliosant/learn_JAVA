@@ -3,12 +3,16 @@ package courseJava.app;
 import java.util.Locale;
 import java.util.Scanner;
 
+import courseJava.entities.BankAccount;
+
+//import courseJava.basic.ProductPrivate;
+
 //import courseJava.entities.Triangle;
 //import courseJava.entities.Product;
 //import courseJava.entities.Employee;
 //import courseJava.entities.Student;
 //import courseJava.entities.Retangle;
-import courseJava.utilitaries.Coin;
+//import courseJava.utilitaries.Coin;
 
 public class Main {
 	public static void main(String[] args) {
@@ -91,12 +95,71 @@ public class Main {
 		System.out.println("DIAGONAL: " + retangle.diagonal());
 		*/
 		//DOLLAR-REAL (ESTÁTICOS)
+		/*
 		System.out.println("WHATS IS THE DOLLAR PRICE? ");
 		double priceDollar = sc.nextDouble();
 		System.out.println("HOW MANY DOLLARS WILL BE  BOUGHT? ");
 		double dollar = sc.nextDouble();
 		
 		System.out.printf("AMOUNT TO BE PAID IN REAIS = %.2f", Coin.convertInReal(priceDollar, dollar));
-		sc.close(); 
+		*/
+		
+		//PRODUTO ENCAPSULADO
+		/*
+		ProductPrivate product = new ProductPrivate();
+		System.out.println("Enter the attributes of your product: ");
+		product.setName(sc.next());
+		product.setPrice(sc.nextDouble());
+		
+		System.out.println(product); //toString configurada
+		
+		//System.out.println("\n\nProduct: " + product.name + "\nPrice: " + product.price + "\nQuantity: " + product.quantity);
+		
+		//System.out.printf("The total value of all products in Stock is: %.2f\n", product.totalValueInStock());
+		
+		System.out.println("\nEnter the number of products to be added in Stock: ");
+		product.addProducts(sc.nextInt());
+		
+		System.out.println("\nEnter the number of  products to be removed in StockS: ");
+		product.removeProducts(sc.nextInt());
+		
+		System.out.println("\n\n\n" + product); //toString configurada
+		*/
+		
+		//CONTA BANCÁRIA
+		System.out.println("ACCOUNT NUMBER: ");
+		int number = sc.nextInt();
+		sc.nextLine();
+		System.out.println("HOLDER: ");
+		String name = sc.nextLine();
+		
+		BankAccount account = new BankAccount(number, name);
+		
+		System.out.println("IS THERE AN INITIAL DEPOSIT?[Y/N]");
+		char answer = sc.next().charAt(0);
+		 
+		if(answer == 'Y' || answer == 'y') {
+			account.deposit(sc.nextDouble());
+			System.out.println(account);
+		}
+		else if(answer == 'N' || answer == 'n') {
+			System.out.println(account);
+		}
+		else {
+			System.out.println("INVALID OPTION! DEPOSIT WILL NOT BE DONE!");
+		}
+		System.out.println("\n\nENTER A DEPOSIT VALUE: ");
+		account.deposit(sc.nextDouble());
+		System.out.println(account);
+		
+		System.out.println("\n\nENTER A WITHDRAW VALUE: ");
+		account.withdraw(sc.nextDouble());
+		
+		System.out.println(account);
+		
+		sc.close();
+		
 	}
 }
+
+
