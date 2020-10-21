@@ -6,7 +6,9 @@ import java.util.Scanner;
 //import courseJava.entities.Triangle;
 //import courseJava.entities.Product;
 //import courseJava.entities.Employee;
-import courseJava.entities.Student;
+//import courseJava.entities.Student;
+//import courseJava.entities.Retangle;
+import courseJava.utilitaries.Coin;
 
 public class Main {
 	public static void main(String[] args) {
@@ -67,14 +69,34 @@ public class Main {
 		*/
 		
 		//ALUNO
+		/*
 		Student student = new Student();
 		student.name = sc.next();
 		student.grade0 = sc.nextDouble();
 		student.grade1 = sc.nextDouble();
-		student.grade2 = sc.nextDouble();
+		student.grade2 = sc.nextDouble(); 
 		
 		student.studentSituation();
+		*/
 		
-		sc.close();
+		//RETÂNGULO
+		/*
+		Retangle retangle = new Retangle();
+		System.out.println("RETANGLE:");
+		retangle.width = sc.nextDouble();
+		retangle.height = sc.nextDouble();
+		
+		System.out.println("AREA: " + retangle.area());
+		System.out.println("PERIMETER: "+ retangle.perimeter());
+		System.out.println("DIAGONAL: " + retangle.diagonal());
+		*/
+		//DOLLAR-REAL (ESTÁTICOS)
+		System.out.println("WHATS IS THE DOLLAR PRICE? ");
+		double priceDollar = sc.nextDouble();
+		System.out.println("HOW MANY DOLLARS WILL BE  BOUGHT? ");
+		double dollar = sc.nextDouble();
+		
+		System.out.printf("AMOUNT TO BE PAID IN REAIS = %.2f", Coin.convertInReal(priceDollar, dollar));
+		sc.close(); 
 	}
 }
