@@ -5,12 +5,13 @@ import java.util.Scanner;
 
 import courseJava.entities.BankAccount;
 
+
 //import courseJava.basic.ProductPrivate;
 
 //import courseJava.entities.Triangle;
 //import courseJava.entities.Product;
 //import courseJava.entities.Employee;
-//import courseJava.entities.Student;
+import courseJava.entities.Student;
 //import courseJava.entities.Retangle;
 //import courseJava.utilitaries.Coin;
 
@@ -127,6 +128,7 @@ public class Main {
 		*/
 		
 		//CONTA BANCÁRIA
+		/*
 		System.out.println("ACCOUNT NUMBER: ");
 		int number = sc.nextInt();
 		sc.nextLine();
@@ -156,6 +158,36 @@ public class Main {
 		account.withdraw(sc.nextDouble());
 		
 		System.out.println(account);
+		*/
+		
+		System.out.println("How many Students, please?");
+		int n = 0;
+		while (n <= 0 || n > 10) {
+			System.out.println("Enter with values in the range (1-10), please?");
+			n = sc.nextInt();
+		}
+		
+		Student[] bedrooms = new Student[10];
+		
+		for (int i = 0; i<n; i++) {
+			System.out.println("Number room: ");
+			int room = sc.nextInt();
+			System.out.println("Students" + (i+1));
+			bedrooms[room] = new Student();
+			System.out.println("Name: ");
+			bedrooms[room].name = sc.next();
+			System.out.println("Email: ");
+			bedrooms[room].email = sc.next();
+			bedrooms[room].bedroom = room;
+			
+		}
+		
+		int j = 0;
+		for (Student room: bedrooms) {
+			if(room != null)
+				System.out.println("\n:::::::::::::Rent " + (j+1) + "::::::::::::: " + room);
+				j += 1;
+		}
 		
 		sc.close();
 		

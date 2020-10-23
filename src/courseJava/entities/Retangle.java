@@ -19,5 +19,10 @@ public class Retangle {
 	public double diagonal() {
 		return Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
 	}
+	
+	public String toString() {
+		return "\nWidth: " + String.format("%.1f\n", width) +
+				"Height: " + String.format("%.1f", height);
+	}
 }
 

@@ -6,6 +6,10 @@ public class Student {
 	public double grade1;
 	public double grade2;
 	
+	//To the "bedroom" exemple 
+	public String email;
+	public int bedroom;
+	
 	public Student() {
 		
 	}
@@ -30,5 +34,12 @@ public class Student {
 					+ "MISSING %.2f POINTS",
 					finalGrade, 60-finalGrade);
 		}
+	}
+	
+	//To the "bedroom" exemple 
+	public String toString() {
+		return "\nName: " + name
+				+ "\nEmail: " + email
+				+ "\nBedroom: "+ bedroom;
 	}
 }

@@ -1,4 +1,4 @@
-package courseJava.basic;
+package courseJava.entities;
 
 public class ProductPrivate {
 	private String name;
