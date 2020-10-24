@@ -1,6 +1,7 @@
 package courseJava.entities;
 
 public class Employee {
+	/*
 	public String name;
 	public double glossSalary;
 	public  double tax;
@@ -30,4 +31,39 @@ public class Employee {
 		double netSalary = glossSalary-tax;
 		return netSalary;
 	}
+	*/
+	
+	//EMPREGADO PRIVADO
+	private int id;
+	private String name;
+	private double salary;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
+	public String toString() {
+		return "\nId: " + id
+				+ "\nName: " + name
+				+ "\nSalary: $ " + String.format("%.2f", salary);
+	}
+	
+	
+	
+	
 }
