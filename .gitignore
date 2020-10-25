@@ -1,0 +1,14 @@
+/courseJava/
+
+Compiled class file
+*.class
+
+#Log file
+*.log
+
+
+*.jar
+*.war
+*.zip
+*.tar.gz
+*.rar
