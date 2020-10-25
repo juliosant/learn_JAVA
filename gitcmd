@@ -1,0 +1,28 @@
+git commands
+
+#Mostrar commits
+git log
+git log --oneline
+
+# Apagar até o último commit:
+$ git clean -df
+$ git checkout -- .
+
+# Remover commit sem alterar valores
+$ git reset --soft HEAD1
+
+# Remover commit no GITHUB
+$ git push -f origin HEAD^:master
+
+# Remover commit e alterar valores
+$ git reset --hard HEAD1
+
+# Verificar commits anteriores sem perder o atual
+$ git checkout "codigo id sem aspas"
+git checkout master
+
+# Apntar para um novo repositório do git
+$ git remote set-url origin "endereço do repo.git sem aspas"
+
+Sair do VIM
+ESC + :q!
