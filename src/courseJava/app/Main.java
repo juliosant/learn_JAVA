@@ -163,55 +163,86 @@ public class Main {
 		 * System.out.println("\n:::::::::::::Rent " + (j+1) + "::::::::::::: " + room);
 		 * j += 1; }
 		 */
-		
-		//EMpregado
-		List<Employee> employees = new ArrayList<Employee>();
 
-		System.out.println("How many employees do you want to add?:");
-		int qty = sc.nextInt();
+		// ENCAPSULAMENTO - EMOREGADOS
+		/*
+		 * List<Employee> employees = new ArrayList<Employee>();
+		 * 
+		 * System.out.println("How many employees do you want to add?:"); int qty =
+		 * sc.nextInt();
+		 * 
+		 * int cont = 1; while (qty > 0) { Employee employee = new Employee();
+		 * System.out.println("\nEmployee #" + cont); System.out.println("Id:");
+		 * employee.setId(sc.nextInt()); System.out.println("Name"); sc.nextLine();
+		 * employee.setName(sc.nextLine()); System.out.println("Initial Salary");
+		 * employee.setSalary(sc.nextDouble());
+		 * 
+		 * employees.add(employee);
+		 * 
+		 * cont += 1; qty -= 1; }
+		 * 
+		 * System.out.println("Enter the employee id that will have salary increase: ");
+		 * int id = sc.nextInt();
+		 * 
+		 * 
+		 * 
+		 * Employee aux = employees.stream().filter(x -> x.getId() ==
+		 * id).findFirst().orElse(null);
+		 * 
+		 * if(aux != null) { System.out.println("Enter the percentage: "); double
+		 * percent = (sc.nextDouble()) / 100; for (Employee employee : employees) { if
+		 * (id == employee.getId()) { double newSalary = employee.getSalary() +
+		 * (employee.getSalary() * percent); employee.setSalary(newSalary); } } }
+		 * 
+		 * else { System.out.println("This id does not exist"); }
+		 * 
+		 * for (Employee employee : employees) { System.out.println(employee); }
+		 */
 
-		int cont = 1;
-		while (qty > 0) {
-			Employee employee = new Employee();
-			System.out.println("\nEmployee #" + cont);
-			System.out.println("Id:");
-			employee.setId(sc.nextInt());
-			System.out.println("Name");
-			sc.nextLine();
-			employee.setName(sc.nextLine());
-			System.out.println("Initial Salary");
-			employee.setSalary(sc.nextDouble());
+		System.out.println("Enter how many rows your matrix will have: ");
+		int m = sc.nextInt();
 
-			employees.add(employee);
+		System.out.println("Enter how many columns your matrix will have: ");
+		int n = sc.nextInt();
 
-			cont += 1;
-			qty -= 1;
+		int[][] matrix = new int[m][n];
+
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				System.out.print("Row: " + i + " and Column: " + j + ": ");
+				matrix[i][j] = sc.nextInt();
+				System.out.print("\n");
+			}
 		}
 
-		System.out.println("Enter the employee id that will have salary increase: ");
-		int id = sc.nextInt();
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				System.out.print("{" + matrix[i][j] + "} ");
+			}
+			System.out.print("\n");
+		}
 
-		
-		
-		Employee aux = employees.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
-	
-		if(aux != null) {
-			System.out.println("Enter the percentage: ");
-			double percent = (sc.nextDouble()) / 100;
-			for (Employee employee : employees) {
-				if (id == employee.getId()) {
-					double newSalary = employee.getSalary() + (employee.getSalary() * percent);
-					employee.setSalary(newSalary);
+		System.out.println("Type a matrix number to find Adjacents numbers:");
+		int x = sc.nextInt();
+
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				if (matrix[i][j] == x) {
+					if (i > 0) {
+						System.out.println("Top: " + matrix[i - 1][j]);
+					}
+					if (i < matrix[i].length-1) {
+						System.out.println("Button: " + matrix[i + 1][j]);
+					}
+					if(j > 0) {
+						System.out.println("Left: " + matrix[i][j - 1]);
+					}
+					if(j <	 matrix[j].length-1) {
+						System.out.println("Right: " + matrix[i][j + 1]);
+					}
 				}
-			} 
-		}
-		
-		else {
-			System.out.println("This id does not exist");
-		}
-
-		for (Employee employee : employees) {
-			System.out.println(employee);
+				
+			}
 		}
 
 		sc.close();
