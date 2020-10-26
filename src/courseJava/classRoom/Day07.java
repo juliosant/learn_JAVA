@@ -7,8 +7,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
+import courseJava.classRoom.entities.Order;
 import courseJava.classRoom.enums.OrderStatus;
-import courseJava.entities.Order;
 
 public class Day07 {
 	public static void main(String[] args) throws ParseException {

@@ -3,8 +3,8 @@ package courseJava.classRoom;
 import java.util.Locale;
 import java.util.Scanner;
 
-import courseJava.entities.ProductPrivate;
-import courseJava.entities.Retangle;
+import courseJava.classRoom.entities.ProductPrivate;
+import courseJava.classRoom.entities.Retangle;
 
 public class Day05 {
 	public static void main(String[] args) {

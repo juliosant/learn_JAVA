@@ -5,7 +5,7 @@ package courseJava.classRoom;
 import java.util.Locale;
 import java.util.Scanner;
 
-import courseJava.utilitaries.Calculator;
+import courseJava.classRoom.utilitaries.Calculator;
 
 public class Day04 {
 
