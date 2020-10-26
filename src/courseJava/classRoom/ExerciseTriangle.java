@@ -1,4 +1,4 @@
-package courseJava.basic;
+package courseJava.classRoom;
 
 import java.util.Locale;
 import java.util.Scanner;

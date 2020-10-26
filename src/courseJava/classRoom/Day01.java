@@ -1,9 +1,9 @@
-package courseJava.basic;
+package courseJava.classRoom;
 
 import java.util.Scanner;
 import java.util.Locale;
 
-public class Class01 {
+public class Day01 {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);

@@ -1,13 +1,13 @@
 //CONSTANTES
 
-package courseJava.basic;
+package courseJava.classRoom;
 
 import java.util.Locale;
 import java.util.Scanner;
 
 import courseJava.utilitaries.Calculator;
 
-public class Class04 {
+public class Day04 {
 
 	
 			

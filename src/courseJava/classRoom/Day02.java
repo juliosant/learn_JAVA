@@ -1,6 +1,6 @@
-package courseJava.basic;
+package courseJava.classRoom;
 
-public class Class02 {
+public class Day02 {
 	public static void main(String[] args) {
 		// DO-WHILE
 		/*

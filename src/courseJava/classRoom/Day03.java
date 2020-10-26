@@ -1,9 +1,9 @@
-package courseJava.basic;
+package courseJava.classRoom;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Class03 {
+public class Day03 {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);

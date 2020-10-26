@@ -1,4 +1,4 @@
-package courseJava.basic;
+package courseJava.classRoom;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 import courseJava.entities.ProductPrivate;
 import courseJava.entities.Retangle;
 
-public class Class05 {
+public class Day05 {
 	public static void main(String[] args) {
 		
 		Locale.setDefault(Locale.US);
