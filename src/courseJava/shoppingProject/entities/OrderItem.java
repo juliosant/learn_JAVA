@@ -12,6 +12,7 @@ public class OrderItem {
 	public OrderItem(Integer quantity, Double price, Product product) {
 		this.quantity = quantity;
 		this.price = price;
+		this.product = product;
 	}
 
 	public Integer getQuantity() {
@@ -30,8 +31,16 @@ public class OrderItem {
 		this.price = price;
 	}
 	
+
 	public Double subTotal() {
 		return price * quantity; 
 	}
-
+	
+	
+	public String toString() {
+		return product.getName() + ", " 
+				+ price  + ", " 
+				+ "Quantity: " + quantity + ", "
+				+ "Subtotal: " + String.format("%.2f", subTotal());
+	}
 }
