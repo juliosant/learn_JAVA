@@ -21,7 +21,10 @@ $ git reset --hard HEAD1
 $ git checkout "codigo id sem aspas"
 git checkout master
 
-# Apntar para um novo repositório do git
+#Associar repositório github com pasta local
+git remote add origin "link_do_repositório_sem_aspas.git"
+
+# Apontar para um novo repositório do git
 $ git remote set-url origin "endereço do repo.git sem aspas"
 
 Sair do VIM
